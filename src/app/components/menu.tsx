@@ -4,7 +4,7 @@ import Image from "next/image";
 const MenuSection = () => {
   return (
     <section className=" my-2 py-12 px-6 bg-gradient-to-br from-gray-50 to-gray-200 w-full lg:max-w-screen-lg mx-auto rounded-3xl shadow-xl">
-      <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">
+      <h2 className="text-4xl font-bold text-center mb-6 text-stone-800">
         Menú
       </h2>
 
@@ -128,8 +128,10 @@ const MenuSection = () => {
             </a>
           </div>
           <Image
-            src="images/jaguarin.gif"
+            src="/images/jaguarin.gif"
             alt="Jaguarin"
+            width={300}
+            height={500}
             className="w-full h-80 object-cover"
           />
         </div>

@@ -8,8 +8,10 @@ const Navbar: FC = () => {
         <a href="/" className="flex items-center space-x-3">
           <Image
             src="/images/logo onza.webp"
+            width={40}  // Aquí agregas el width
+            height={40} // Aquí agregas el height
             className="h-10"
-            alt="Flowbite Logo"
+            alt="Onza Logo"
             loading="lazy"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap">Onza</span>
@@ -54,7 +56,7 @@ const Navbar: FC = () => {
                 href="#"
                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
               >
-                Conócenos+ 
+                Conócenos+
               </a>
             </li>
             <li>
