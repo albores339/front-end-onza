@@ -3,35 +3,31 @@ import React from "react";
 const DetallesSection = () => {
   return (
     <section className="p-8 w-full lg:max-w-screen-lg mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-800">Detalles</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-800">
+        Detalles
+      </h2>
 
-      {/* Sección de detalles con un degradado más suave */}
-      <div className="bg-gradient-to-br from-pink-500 via-orange-300 to-yellow-100 p-8 rounded-xl shadow-lg text-white">
-        <p className="text-lg font-semibold text-center mb-6">
-          ¡Somos la nueva forma de tener tus cócteles y bebidas favoritas!
+      {/* Sección de detalles con contenido importante */}
+      <div className="bg-gradient-to-br from-pink-500 via-orange-500 to-yellow-200 p-8 rounded-xl shadow-lg">
+        <p className="text-lg font-semibold text-center mb-6 text-white">
+          ¡Somos la nueva forma de disfrutar de tus cócteles y bebidas favoritas
+          en Comitán!
         </p>
 
         {/* Información general */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Dirección */}
-          <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <div className="flex-shrink-0">
-              <i className="fas fa-map-marker-alt text-2xl text-pink-500"></i>
-            </div>
+          <address className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg not-italic">
+            <i className="fas fa-map-marker-alt text-2xl text-pink-500"></i>
             <div className="ml-4">
               <h4 className="text-lg font-bold">Dirección</h4>
-              <p className="text-sm">
-                4ta Avenida Oriente Sur #69, Comitán, México
-              </p>
+              <p className="text-sm">4ta Avenida Oriente Sur #69, Comitán, Chiapas, México</p>
             </div>
-          </div>
+          </address>
 
           {/* Teléfono */}
           <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <div className="flex-shrink-0">
-              <i className="fas fa-phone-alt text-2xl text-pink-500"></i>
-            </div>
+            <i className="fas fa-phone-alt text-2xl text-pink-500"></i>
             <div className="ml-4">
               <h4 className="text-lg font-bold">Teléfono</h4>
               <p className="text-sm">963 230 4352</p>
@@ -40,9 +36,7 @@ const DetallesSection = () => {
 
           {/* Correo */}
           <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <div className="flex-shrink-0">
-              <i className="fas fa-envelope text-2xl text-pink-500"></i>
-            </div>
+            <i className="fas fa-envelope text-2xl text-pink-500"></i>
             <div className="ml-4">
               <h4 className="text-lg font-bold">Correo electrónico</h4>
               <p className="text-sm">onza.comitan@gmail.com</p>
@@ -51,22 +45,16 @@ const DetallesSection = () => {
 
           {/* Servicios */}
           <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <div className="flex-shrink-0">
-              <i className="fas fa-truck text-2xl text-pink-500"></i>
-            </div>
+            <i className="fas fa-truck text-2xl text-pink-500"></i>
             <div className="ml-4">
               <h4 className="text-lg font-bold">Servicios</h4>
-              <p className="text-sm">
-                Entrega a domicilio · Para llevar · Reservas online
-              </p>
+              <p className="text-sm">Entrega a domicilio · Para llevar · Reservas online</p>
             </div>
           </div>
 
           {/* Precios */}
           <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <div className="flex-shrink-0">
-              <i className="fas fa-dollar-sign text-2xl text-pink-500"></i>
-            </div>
+            <i className="fas fa-dollar-sign text-2xl text-pink-500"></i>
             <div className="ml-4">
               <h4 className="text-lg font-bold">Rango de precios</h4>
               <p className="text-sm">$</p>
@@ -75,9 +63,7 @@ const DetallesSection = () => {
 
           {/* Calificación */}
           <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <div className="flex-shrink-0">
-              <i className="fas fa-star text-2xl text-pink-500"></i>
-            </div>
+            <i className="fas fa-star text-2xl text-pink-500"></i>
             <div className="ml-4">
               <h4 className="text-lg font-bold">Calificación</h4>
               <p className="text-sm">Aún sin calificación (0 opiniones)</p>
@@ -96,6 +82,7 @@ const DetallesSection = () => {
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
+            title="Ubicación de Onza en Comitán"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
