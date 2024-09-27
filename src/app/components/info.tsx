@@ -8,7 +8,7 @@ const DetallesSection = () => {
       </h2>
 
       {/* Sección de detalles con contenido importante */}
-      <div className="bg-gradient-to-br from-pink-500 via-orange-500 to-yellow-200 p-8 rounded-xl shadow-lg">
+      <div className="bg-gradient-to-br from-pink-400 via-orange-400 to-yellow-200 p-8 rounded-xl shadow-lg">
         <p className="text-lg font-semibold text-center mb-6 text-white">
           ¡Somos la nueva forma de disfrutar de tus cócteles y bebidas favoritas
           en Comitán!
@@ -49,24 +49,6 @@ const DetallesSection = () => {
             <div className="ml-4">
               <h4 className="text-lg font-bold">Servicios</h4>
               <p className="text-sm">Entrega a domicilio · Para llevar · Reservas online</p>
-            </div>
-          </div>
-
-          {/* Precios */}
-          <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <i className="fas fa-dollar-sign text-2xl text-pink-500"></i>
-            <div className="ml-4">
-              <h4 className="text-lg font-bold">Rango de precios</h4>
-              <p className="text-sm">$</p>
-            </div>
-          </div>
-
-          {/* Calificación */}
-          <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <i className="fas fa-star text-2xl text-pink-500"></i>
-            <div className="ml-4">
-              <h4 className="text-lg font-bold">Calificación</h4>
-              <p className="text-sm">Aún sin calificación (0 opiniones)</p>
             </div>
           </div>
         </div>
