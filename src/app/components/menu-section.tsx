@@ -15,7 +15,7 @@ interface MenuSectionProps {
 const Menu: FC<MenuSectionProps> = ({ title, children }) => {
   return (
     <section className="py-4">
-      <h2 className="text-4xl font-bold text-center text-emerald-600 mb-10">{title}</h2>
+      <h2 className="text-4xl font-bold text-center text-emerald-600 mb-6">{title}</h2>
       <Swiper
         slidesPerView={1}
         spaceBetween={20}

@@ -11,8 +11,8 @@ const MenuSection = dynamic(() => import("../components/menu-section"), { ssr: f
 
 const MenuPage: FC = () => {
   return (
-    <div className="min-h-screen pt-12 bg-white max-w-screen-lg mx-4">
-      <header className="text-center text-stone-700">
+    <div className="min-h-screen pt-12 bg-white max-w-screen-lg mx-auto">
+      <header className="text-center text-stone-700 p-6">
         <h1 className="text-5xl font-bold">Menú de Cocteles</h1>
         <p className="text-xl">¡Explora nuestras deliciosas opciones y sabores únicos!</p>
       </header>
