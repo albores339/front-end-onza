@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // components/Card.tsx
 interface CardProps {
     title: string;
@@ -16,8 +18,8 @@ interface CardProps {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <a
-          href="#"
+        <Link
+          href="/menu"
           className={`inline-flex items-center px-6 py-3 bg-white ${textColor} rounded-full shadow-md hover:bg-opacity-20 transition-colors`}
         >
           Ver más
@@ -35,7 +37,7 @@ interface CardProps {
               d="M1 5h12m0 0L9 1m4 4L9 9"
             />
           </svg>
-        </a>
+        </Link>
       </div>
     );
   }
