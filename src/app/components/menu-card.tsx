@@ -20,7 +20,7 @@ const Card: FC<CardProps> = ({ name, description, price, copy, imageUrl, icon })
         backgroundPosition: "center",
       }}
     >
-      <div className="shadow-lg backdrop-blur-md p-4 rounded-2xl min-h-[500px] bg-white/75 text-stone-700"> {/* Se agrega altura mínima */}
+      <div className="shadow-lg backdrop-blur-xl p-4 rounded-2xl min-h-[500px] bg-white/90 text-stone-700"> {/* Se agrega altura mínima */}
         <h3 className="text-2xl font-bold mb-2 drop-shadow-md">{name}</h3>
         <Image 
           src={imageUrl} 
