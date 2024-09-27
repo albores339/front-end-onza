@@ -1,8 +1,7 @@
 "use client";  // Esto se asegura que el código se ejecute solo en el cliente
 
-import dynamic from "next/dynamic";
 import { FC, ReactNode } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";  // Añadir Autoplay
 import "swiper/css";
 import "swiper/css/pagination";
