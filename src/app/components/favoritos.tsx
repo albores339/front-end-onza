@@ -9,7 +9,7 @@ export default function FavoriteSection() {
         Los favoritos ❤️
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-screen-lg mx-auto">
-        <div className="relative col-span-2 h-64 lg:h-auto" data-aos="zoom-in">
+        <div className="relative col-span-2 h-64 lg:h-4/6" data-aos="zoom-in">
           <Image
             src="/images/1.jpg"
             alt="Accesorios GoPro"
@@ -19,7 +19,7 @@ export default function FavoriteSection() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-10 rounded-2xl"></div>
         </div>
-        <div className="grid grid-rows-2 gap-4">
+        <div className="grid grid-rows-2 gap-4 lg:h-4/6">
           <ImageOverlay src="/images/2.jpg" alt="Módulos" />
           <ImageOverlay src="/images/3.jpg" alt="Soportes" />
         </div>

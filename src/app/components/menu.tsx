@@ -7,7 +7,7 @@ export default function MenuSection() {
   return (
     <main
       id="menu"
-      className="my-2 py-12 px-6 bg-gradient-to-br from-gray-50 to-gray-200 w-full lg:max-w-screen-lg mx-auto rounded-3xl shadow-xl"
+      className="my-2 py-12 px-6 w-full lg:max-w-screen-lg mx-auto rounded-3xl"
       data-aos="fade-up"
     >
       <h2 className="text-4xl font-bold text-center mb-6 text-stone-800">Menú</h2>
