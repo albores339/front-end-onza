@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={outfit.className}> {/* Aplica la clase de Outfit */}
       <body className="antialiased bg-white">
         <Navbar />
-        <div className="mt-16 max-w-screen-2xl mx-auto">
+        <div className="mt-16 mx-auto max-w-screen-2xl">
           {children}
         </div>
         <WhatsAppButton />

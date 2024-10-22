@@ -1,77 +1,101 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import Iphone15Pro from "@/components/ui/iphone-15-pro";
+import { BeakerIcon, FireIcon, SparklesIcon, MapPinIcon, InboxIcon, PhoneIcon } from "@heroicons/react/24/solid"; // Importa los íconos correspondientes
+import Image from "next/image";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
-const DetallesSection = () => {
+export function Iphone15ProDemo() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [
+    "https://res.cloudinary.com/dnytuotnv/image/upload/v1729571553/WhatsApp_Image_2024-10-21_at_10.30.46_PM_epshau.jpg",
+    "https://res.cloudinary.com/dnytuotnv/image/upload/v1729571553/WhatsApp_Image_2024-10-21_at_10.30.47_PM_2_pjtbl8.jpg",
+    "https://res.cloudinary.com/dnytuotnv/image/upload/v1729571553/WhatsApp_Image_2024-10-21_at_10.30.47_PM_1_aqczhc.jpg"
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Cambia la imagen cada 3 segundos
+
+    return () => clearInterval(intervalId); // Limpia el intervalo al desmontar
+  }, [images.length]);
+
   return (
-    <section className="p-8 w-full lg:max-w-screen-lg mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-800">
-        Detalles
-      </h2>
-
-      {/* Sección de detalles con contenido importante */}
-      <div className="bg-gradient-to-br from-pink-400 via-orange-400 to-yellow-200 p-8 rounded-xl shadow-lg">
-        <p className="text-lg font-semibold text-center mb-6 text-white">
-          ¡Somos la nueva forma de disfrutar de tus cócteles y bebidas favoritas
-          en Comitán!
-        </p>
-
-        {/* Información general */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Dirección */}
-          <address className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg not-italic">
-            <i className="fas fa-map-marker-alt text-2xl text-pink-500"></i>
-            <div className="ml-4">
-              <h4 className="text-lg font-bold">Dirección</h4>
-              <p className="text-sm">4ta Avenida Oriente Sur #69, Comitán, Chiapas, México</p>
-            </div>
-          </address>
-
-          {/* Teléfono */}
-          <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <i className="fas fa-phone-alt text-2xl text-pink-500"></i>
-            <div className="ml-4">
-              <h4 className="text-lg font-bold">Teléfono</h4>
-              <p className="text-sm">963 230 4352</p>
-            </div>
-          </div>
-
-          {/* Correo */}
-          <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <i className="fas fa-envelope text-2xl text-pink-500"></i>
-            <div className="ml-4">
-              <h4 className="text-lg font-bold">Correo electrónico</h4>
-              <p className="text-sm">onza.comitan@gmail.com</p>
-            </div>
-          </div>
-
-          {/* Servicios */}
-          <div className="flex items-center bg-white bg-opacity-70 p-4 rounded-lg shadow-lg">
-            <i className="fas fa-truck text-2xl text-pink-500"></i>
-            <div className="ml-4">
-              <h4 className="text-lg font-bold">Servicios</h4>
-              <p className="text-sm">Entrega a domicilio · Para llevar · Reservas online</p>
-            </div>
-          </div>
+    <div className="flex flex-col md:flex-row md:justify-between py-10 mx-8">
+      <div className="relative flex justify-center w-full md:w-1/2 md:max-h-[500px] mb-10">
+        <Iphone15Pro
+          className="size-full"
+          src="https://via.placeholder.com/430x880" // Placeholder para el mockup del iPhone
+        />
+        <div className="absolute inset-0 flex justify-center items-center md:max-h-[500px] rounded-3xl">
+          {/* Imágenes en el mockup del iPhone */}
+          {images.map((src, index) => (
+            <Image
+              key={index}
+              loading="lazy"
+              src={src}
+              alt={`Imagen del iPhone ${index + 1}`} // Texto alternativo descriptivo
+              className={`absolute w-full p-2 h-full object-contain rounded-3xl transition duration-500 ease-in-out transform ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'}`}
+              fill
+            />
+          ))}
         </div>
       </div>
 
-      {/* Sección de Google Maps */}
-      <div className="mt-12">
-        <h3 className="text-3xl font-bold text-stone-800 mb-4">Ubicación</h3>
-        <div className="w-full h-64 rounded-lg shadow-lg overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.452377961655!2d-92.1338420544073!3d16.248569144503627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858d3962e1f58b7f%3A0x605034749a70e3fd!2sONZA!5e0!3m2!1sen!2smx!4v1726896115403!5m2!1sen!2smx"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            title="Ubicación de Onza en Comitán"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+      {/* Información de contacto */}
+      <div className="md:w-1/2 flex flex-col justify-center pl-10">
+        <h2 className="text-2xl font-bold mb-4">Contacto</h2>
+        <div className="mb-2 flex items-center">
+          <MapPinIcon className="h-5 w-5 mr-2 text-gray-500" />
+          <h3 className="text-xl font-semibold">Dirección</h3>
+        </div>
+        <p>4ta Avenida Oriente Sur #69, Comitán, Chiapas, México</p>
+
+        <div className="mb-2 flex items-center">
+          <PhoneIcon className="h-5 w-5 mr-2 text-gray-500" />
+          <h3 className="text-xl font-semibold">Teléfono</h3>
+        </div>
+        <p>963 230 4352</p>
+
+        <div className="mb-2 flex items-center">
+          <InboxIcon className="h-5 w-5 mr-2 text-gray-500" />
+          <h3 className="text-xl font-semibold">Correo electrónico</h3>
+        </div>
+        <p>onza.comitan@gmail.com</p>
+
+        <div className="mb-2">
+          <h3 className="text-xl font-semibold">Servicios</h3>
+          <ul>
+            <li className="flex items-center">
+              <BeakerIcon className="h-5 w-5 mr-2 text-blue-500" />
+              <span>Entrega a domicilio</span>
+            </li>
+            <li className="flex items-center">
+              <FireIcon className="h-5 w-5 mr-2 text-red-500" />
+              <span>Para llevar</span>
+            </li>
+            <li className="flex items-center">
+              <SparklesIcon className="h-5 w-5 mr-2 text-yellow-500" />
+              <span>Reservas online</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Redes Sociales */}
+        <div className="mt-4">
+          <h3 className="text-xl font-semibold mb-2">Síguenos en</h3>
+          <div className="flex space-x-4">
+            <a href="https://www.instagram.com/onza.oz/" target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600">
+              <FaInstagram/>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/onza.oz" target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600">
+              <FaFacebook/>
+              <span>Facebook</span>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default DetallesSection;
+}

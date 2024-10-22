@@ -7,7 +7,8 @@ import HeroSection from "./components/hero";
 import MenuSection from "./components/menu";
 import CelebrationSection from "./components/video";
 import FavoriteSection from "./components/favoritos";
-import DetallesSection from "./components/info";
+import { Iphone15ProDemo } from "./components/info";
+import { HalloweenSection } from "./components/Halloween";
 
 export default function Home() {
   useEffect(() => {
@@ -22,8 +23,9 @@ export default function Home() {
       <HeroSection />
       <MenuSection />
       <CelebrationSection />
+      <HalloweenSection />
       <FavoriteSection />
-      <DetallesSection />
+      <Iphone15ProDemo />
     </div>
   );
 }
