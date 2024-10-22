@@ -1,58 +1,84 @@
-// components/CelebrationSection.tsx
-import React from "react";
+import { FC } from 'react';
+import { WhatsAppButton } from './WhatsAppProductButton';
+import Image from 'next/image';
 
-export default function CelebrationSection() {
+const GoproGrid: FC = () => {
   return (
-    <section
-      className="py-10 px-6 bg-gradient-to-br from-blue-50 to-teal-100 w-full lg:max-w-screen-lg mx-auto rounded-3xl shadow-xl"
-      data-aos="fade-right"
-    >
-      <div className="flex flex-col lg:flex-row items-center">
-        <div
-          className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:mr-8 flex justify-center relative transition-transform transform hover:scale-105"
-          data-aos="zoom-in"
-        >
-          <iframe
-            src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1162802011451755%2F&show_text=false&width=267&t=0"
-            width="267"
-            height="476"
-            className="rounded-2xl shadow-2xl"
-            style={{ border: "none", overflow: "hidden" }}
-            scrolling="no"
-            frameBorder="0"
-            allowFullScreen={true}
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
-          <span className="absolute top-0 right-0 bg-pink-400 p-2 rounded-full shadow-lg text-white text-lg transform rotate-12">
-            🎉
-          </span>
+    <div className='py-10'>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-2 max-w-screen-lg">
+        
+        {/* Primer video a la izquierda */}
+        <div className="col-span-1 relative">
+          <video 
+            src="https://res.cloudinary.com/dnytuotnv/video/upload/v1729566154/WhatsApp_Video_2024-10-21_at_8.40.31_PM_fnv85o.mp4" 
+            className="w-full h-[460px] lg:h-[500px] object-cover rounded-xl" 
+            autoPlay 
+            muted 
+            loop
+            preload="metadata" // Cambiado a "metadata" para cargar solo los metadatos
+            poster="https://res.cloudinary.com/dnytuotnv/image/upload/v1729566151/preview.jpg" // Imagen previa
+            aria-label="Video de WhatsApp" // Etiqueta accesible
+          />
+          <div className="absolute bottom-4 left-4 z-10">
+            <WhatsAppButton />
+          </div>
         </div>
-        <div
-          className="lg:w-1/2 text-center lg:text-left bg-white p-8 rounded-2xl shadow-lg relative"
-          data-aos="fade-left"
-        >
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-800 tracking-wide">
-            ¡Este mes celebramos en grande!
-          </h2>
-          <p className="text-gray-700 lg:text-lg mb-4 leading-relaxed">
-            Una de nuestras bebidas del mes es la{" "}
-            <strong className="text-teal-500">Mezcalita</strong> con un sabor auténtico a México que no te puedes perder.
-          </p>
-          <p className="text-gray-700 lg:text-lg mb-6">
-            <span className="font-semibold text-pink-500">📍 4ta avenida oriente sur número 69, Comitán, Chiapas, México</span>
-            <br />🕣 Jueves a sábado de 7pm a 11pm Domingos de 12pm a 5pm
-          </p>
-          <a
-            href="#"
-            className="px-6 py-3 bg-teal-500 text-white font-semibold rounded-full shadow-md hover:bg-teal-600 transition-colors duration-300"
-          >
-            ¡Ven a celebrar!
-          </a>
-          <div className="absolute bottom-0 right-0 text-pink-300 text-6xl opacity-10 rotate-45">
-            🍸
+
+        {/* Imágenes */}
+        <div className='col-span-2 grid grid-cols-2 gap-2'>
+          <div className="col-span-1 relative">
+            <Image 
+              loading="lazy" 
+              src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729566151/horarios_qukdwx.jpg"
+              alt="Módulos" 
+              className="w-full object-cover rounded-xl"
+              width={500} // Añadido para mejorar el rendimiento
+              height={300} // Añadido para mejorar el rendimiento
+            />
+          </div>
+          
+          <div className="col-span-1 relative">
+            <Image
+              loading="lazy"
+              src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729566151/cumplea%C3%B1os_pjl8yr.jpg"
+              alt="Soportes"
+              className="w-full object-cover rounded-xl"
+              width={500} // Añadido para mejorar el rendimiento
+              height={300} // Añadido para mejorar el rendimiento
+            />
+          </div>
+          
+          <div className="col-span-2 relative">
+            <Image
+              loading="lazy"
+              src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729567222/408825238_122116062506095617_613648774579516949_n_w0fino.jpg"
+              alt="Protección"
+              className="w-full h-[240px] object-cover rounded-xl"
+              width={800} // Añadido para mejorar el rendimiento
+              height={240} // Añadido para mejorar el rendimiento
+            />
+          </div>
+        </div>
+        
+        {/* Segundo video en la última columna */}
+        <div className="col-span-1 relative">
+          <video 
+            src="https://res.cloudinary.com/dnytuotnv/video/upload/v1729566153/WhatsApp_Video_2024-10-21_at_8.40.32_PM_uejzzn.mp4" 
+            className="w-full h-[460px] lg:h-[500px] object-cover rounded-xl" 
+            autoPlay 
+            muted 
+            loop
+            preload="metadata" // Cambiado a "metadata" para cargar solo los metadatos
+            poster="https://res.cloudinary.com/dnytuotnv/image/upload/v1729566151/preview2.jpg"
+            aria-label="Video de WhatsApp" // Etiqueta accesible
+          />
+          <div className="absolute bottom-4 left-4 z-10">
+            <WhatsAppButton />
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default GoproGrid;
