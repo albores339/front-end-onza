@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from 'react';
-import { WhatsAppButton } from './WhatsAppProductButton';
 import Image from 'next/image';
 
 const GoproGrid: FC = () => {
