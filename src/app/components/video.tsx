@@ -35,9 +35,6 @@ const GoproGrid: FC = () => {
             autoPlay={!isMobile} // Autoplay solo si no es móvil
             controls // Añadir esto
           />
-          <div className="absolute bottom-4 left-4 z-10">
-            <WhatsAppButton />
-          </div>
         </div>
 
         {/* Imágenes */}
@@ -47,9 +44,9 @@ const GoproGrid: FC = () => {
               loading="lazy" 
               src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729566151/horarios_qukdwx.jpg"
               alt="Módulos" 
-              className="w-full object-cover rounded-xl"
-              width={500}
-              height={300}
+              className="w-full object-cover rounded-xl h-56"
+              width={400}
+              height={240}
             />
           </div>
           
@@ -58,9 +55,9 @@ const GoproGrid: FC = () => {
               loading="lazy"
               src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729566151/cumplea%C3%B1os_pjl8yr.jpg"
               alt="Soportes"
-              className="w-full object-cover rounded-xl"
-              width={500}
-              height={300}
+              className="w-full object-cover rounded-xl h-56"
+              width={400}
+              height={240}
             />
           </div>
           
@@ -69,9 +66,9 @@ const GoproGrid: FC = () => {
               loading="lazy"
               src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729567222/408825238_122116062506095617_613648774579516949_n_w0fino.jpg"
               alt="Protección"
-              className="w-full h-[240px] object-cover rounded-xl"
+              className="w-full h-56 object-cover rounded-xl"
               width={800}
-              height={240}
+              height={100}
             />
           </div>
         </div>
@@ -89,9 +86,6 @@ const GoproGrid: FC = () => {
             autoPlay={!isMobile} // Autoplay solo si no es móvil
             controls // Añadir esto
           />
-          <div className="absolute bottom-4 left-4 z-10">
-            <WhatsAppButton />
-          </div>
         </div>
       </div>
     </div>

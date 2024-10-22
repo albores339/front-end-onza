@@ -21,7 +21,7 @@ export function Iphone15ProDemo() {
   }, [images.length]);
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-between py-10 mx-8">
+    <div className="flex flex-col md:flex-row md:justify-between py-8 mx-8">
       <div className="relative flex justify-center w-full md:w-1/2 md:max-h-[500px] mb-10">
         <Iphone15Pro
           className="size-full"

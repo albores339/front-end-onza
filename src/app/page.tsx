@@ -9,6 +9,7 @@ import CelebrationSection from "./components/video";
 import FavoriteSection from "./components/favoritos";
 import { Iphone15ProDemo } from "./components/info";
 import { HalloweenSection } from "./components/Halloween";
+import MyMapComponent from "./components/map";
 
 export default function Home() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Home() {
       <HalloweenSection />
       <FavoriteSection />
       <Iphone15ProDemo />
+      <MyMapComponent/>
     </div>
   );
 }

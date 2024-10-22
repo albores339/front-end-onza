@@ -36,10 +36,11 @@ export default function Hero() {
       <Particles
         className="absolute inset-0 z-10"
         quantity={100}
-        ease={100}
+        ease={500}
         color={color}
         refresh
         size={1.5}
+        vy={.5}
       />
 
       {/* Hojas y elementos */}
