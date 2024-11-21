@@ -1,21 +1,28 @@
-"use client";  // Esto asegura que el código se ejecute solo en el cliente
+"use client"; // Esto asegura que el código se ejecute solo en el cliente
 
 import dynamic from "next/dynamic";
-import { FC } from "react";
-import Card from "../components/menu-card";
-import { BeakerIcon, FireIcon, SparklesIcon } from "@heroicons/react/24/solid";
+import { FC, useState } from "react";
 import { SwiperSlide } from "swiper/react";
+import CartModal from "../components/CartModal";
+import Card from "../components/menu/menu-card";
 
 // Usamos dynamic para importar Swiper en el cliente
 const MenuSection = dynamic(() => import("../components/menu-section"), { ssr: false });
 
 const MenuPage: FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   return (
-    <div className="min-h-screen pt-12 bg-white max-w-screen-lg mx-auto">
+    <div className="min-h-screen bg-white max-w-screen-lg mx-auto">
       <header className="text-center text-stone-700 p-6">
         <h1 className="text-5xl font-bold">Menú de Cocteles</h1>
         <p className="text-xl">¡Explora nuestras deliciosas opciones y sabores únicos!</p>
       </header>
+
+      {isModalOpen && <CartModal onClose={handleCloseModal} />}
 
       {/* Sección Intensos */}
       <MenuSection title="Intensos">
@@ -26,7 +33,8 @@ const MenuPage: FC = () => {
             price={75}
             copy="El clásico refrescante con un toque local y cítrico."
             imageUrl="/images/sunrise1.png"
-            icon={<FireIcon className="h-6 w-6 text-pink-500" />}
+            id="9"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -36,7 +44,8 @@ const MenuPage: FC = () => {
             price={75}
             copy="Explosión de dulzura tropical con un toque energético."
             imageUrl="/images/azulito.jpg"
-            icon={<SparklesIcon className="h-6 w-6 text-blue-500" />}
+            id="10"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -46,7 +55,8 @@ const MenuPage: FC = () => {
             price={80}
             copy="Dulce, afrutado y perfecto para un día soleado en la playa."
             imageUrl="/images/sunrise.jpg"
-            icon={<BeakerIcon className="h-6 w-6 text-red-500" />}
+            id="11"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -56,7 +66,8 @@ const MenuPage: FC = () => {
             price={90}
             copy="Fresco y picante, con un toque clásico."
             imageUrl="/images/bloodymary.png"
-            icon={<FireIcon className="h-6 w-6 text-red-500" />}
+            id="12"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -66,7 +77,8 @@ const MenuPage: FC = () => {
             price={90}
             copy="Cremoso y tropical, el sabor del paraíso en un vaso."
             imageUrl="/images/piñacolada.png"
-            icon={<SparklesIcon className="h-6 w-6 text-yellow-500" />}
+            id="13"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
       </MenuSection>
@@ -80,7 +92,8 @@ const MenuPage: FC = () => {
             price={80}
             copy="Refrescante y vibrante, con un toque natural."
             imageUrl="/images/mojito.png"
-            icon={<SparklesIcon className="h-6 w-6 text-green-500" />}
+            id="14"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -90,7 +103,8 @@ const MenuPage: FC = () => {
             price={80}
             copy="Un clásico elegante, con frutas frescas."
             imageUrl="/images/pikarindo.png"
-            icon={<BeakerIcon className="h-6 w-6 text-red-500" />}
+            id="15"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -100,7 +114,8 @@ const MenuPage: FC = () => {
             price={85}
             copy="Ligero, afrutado y perfecto para cualquier ocasión."
             imageUrl="/images/clericotrosa.png"
-            icon={<SparklesIcon className="h-6 w-6 text-pink-500" />}
+            id="16"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -110,7 +125,8 @@ const MenuPage: FC = () => {
             price={90}
             copy="Una combinación de dulce y picante, llena de sabor."
             imageUrl="/images/babymango.png"
-            icon={<BeakerIcon className="h-6 w-6 text-yellow-500" />}
+            id="17"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -120,7 +136,8 @@ const MenuPage: FC = () => {
             price={90}
             copy="Explosión de sabores con tamarindo y picante."
             imageUrl="/images/pikarindo.png"
-            icon={<FireIcon className="h-6 w-6 text-red-500" />}
+            id="18"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
       </MenuSection>
@@ -134,7 +151,8 @@ const MenuPage: FC = () => {
             price={90}
             copy="El equilibrio perfecto entre dulzor y amargor."
             imageUrl="/images/sunrise1.png"
-            icon={<BeakerIcon className="h-6 w-6 text-orange-500" />}
+            id="19"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -144,7 +162,8 @@ const MenuPage: FC = () => {
             price={95}
             copy="Sabor ahumado y tropical que eleva la experiencia."
             imageUrl="/images/mezcalita.png"
-            icon={<FireIcon className="h-6 w-6 text-yellow-500" />}
+            id="20"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -154,7 +173,8 @@ const MenuPage: FC = () => {
             price={75}
             copy="Un toque mexicano clásico con frescura cítrica."
             imageUrl="/images/charronegro.jpg"
-            icon={<SparklesIcon className="h-6 w-6 text-brown-500" />}
+            id="21"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
       </MenuSection>
@@ -168,7 +188,8 @@ const MenuPage: FC = () => {
             price={90}
             copy="El equilibrio perfecto entre dulzor y amargor."
             imageUrl="/images/micheclasica.jpg"
-            icon={<BeakerIcon className="h-6 w-6 text-orange-500" />}
+            id="22"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -178,7 +199,8 @@ const MenuPage: FC = () => {
             price={95}
             copy="Sabor ahumado y tropical que eleva la experiencia."
             imageUrl="/images/michemango.jpg"
-            icon={<FireIcon className="h-6 w-6 text-yellow-500" />}
+            id="23"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -188,7 +210,8 @@ const MenuPage: FC = () => {
             price={75}
             copy="Un toque mexicano clásico con frescura cítrica."
             imageUrl="/images/michetamarindo.jpg"
-            icon={<SparklesIcon className="h-6 w-6 text-brown-500" />}
+            id="24"
+            onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
       </MenuSection>

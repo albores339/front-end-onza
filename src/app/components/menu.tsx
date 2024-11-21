@@ -11,9 +11,9 @@ export default function MenuSection() {
       className="my-2 py-6 bg-gradient-to-br w-full lg:max-w-screen-lg mx-auto rounded-3xl md:px-6"
       data-aos="fade-up"
     >
-      <h2 className="text-4xl font-bold text-center mb-6 text-stone-800" role="heading" aria-level={2}>
-        Menú
-      </h2>
+      <h1 className="text-3xl font-bold text-center mb-6 text-stone-700" role="heading" aria-level={2}>
+        Menú Onza Comitán
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card
           title="Intensos"
@@ -31,7 +31,7 @@ export default function MenuSection() {
         <Card
           title="Refrescantes"
           items={[
-            "Mojito - $80.00",
+            "Bacardi Mojito - $80.00",
             "Clericot Tinto - $80.00",
             "Clericot Rosado - $85.00",
             "Baby Mango - $90.00",
@@ -84,7 +84,7 @@ export default function MenuSection() {
           </div>
           <Image
             src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729559686/jaguarin_km2zcf.jpg"
-            alt="Jaguarin disfrutando"
+            alt="Jaguarin disfrutando su michelada modelos"
             fill
             className="absolute inset-0 w-full h-80 object-cover z-10 rounded-2xl p-2"
           />
