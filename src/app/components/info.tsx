@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BeakerIcon, FireIcon, SparklesIcon, MapPinIcon, InboxIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { SparklesIcon, MapPinIcon, InboxIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { FaInstagram, FaFacebook, FaTruck, FaPhoneAlt, FaConciergeBell } from "react-icons/fa";
 
