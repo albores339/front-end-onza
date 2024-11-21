@@ -40,6 +40,9 @@ const Footer = () => {
       <div className="text-center text-sm mt-4">
         <p>© 2024 Onza. Todos los derechos reservados.</p>
       </div>
+      <div className="text-center text-sm mt-4">
+        <p>Diseñado y desarrollado por ©Juan de Dios Albores Hernández</p>
+      </div>
     </footer>
   );
 };

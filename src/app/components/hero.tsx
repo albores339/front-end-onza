@@ -15,8 +15,6 @@ export default function Hero() {
   // Lista de posiciones para las florecitas
   const flowerPositions = [
     { bottom: "80", left: "10", height: "16" },
-    { bottom: "20", left: "72", height: "12" },
-    { bottom: "68", left: "28", height: "14" },
     { bottom: "10", left: "10", height: "10" },
   ];
 
@@ -35,7 +33,7 @@ export default function Hero() {
       {/* Efecto de partículas */}
       <Particles
         className="absolute inset-0 z-10"
-        quantity={100}
+        quantity={200}
         ease={500}
         color={color}
         refresh
@@ -80,7 +78,7 @@ export default function Hero() {
       />
       <Image
         src="https://res.cloudinary.com/dnytuotnv/image/upload/v1729486984/jaguar_rwlrcf.png"
-        alt="Jaguar con bebida"
+        alt="Jaguar con su bebida Onza"
         width={370} // Especifica el ancho
         height={200} // Especifica la altura
         className="z-10 h-4/5 md:hidden block mx-auto absolute bottom-0"  // Centrando en móvil
@@ -119,14 +117,14 @@ export default function Hero() {
       />
 
       {/* Contenedor para el texto y el botón */}
-      <div className="absolute bottom-10 text-center text-white max-w-screen-2xl w-80 md:w-96 z-20 md:absolute md:bottom-8 lg:bottom-40 md:right-28 lg:right-40 justify-center items-center">
-        <p className="text-lg lg:text-2xl font-bold">
+      <div className="absolute bottom-10 text-center text-white max-w-screen-2xl w-80 md:w-96 z-20 md:absolute md:bottom-8 lg:bottom-48 md:right-28 lg:right-40 justify-center items-center">
+        <p className="text-lg lg:text2xl font-bold">
           ¡Las fiestas de Halloween y próximas posadas son inigualables con los cócteles Onza! 🍹✨
         </p>
 
         {/* Botón "Ver Menú" */}
         <Link href="/menu">
-          <button className="mt-4 inline-block bg-emerald-500 text-white font-bold py-3 px-6 rounded mx-auto animate-bounce">
+          <button className="mt-4 inline-block bg-emerald-500 text-white font-bold py-3 px-6 rounded mx-auto animate-bounce text-2xl">
             Ver Menú
           </button>
         </Link>
