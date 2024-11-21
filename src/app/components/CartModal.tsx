@@ -15,8 +15,19 @@ const CartModal: React.FC<CartModalProps> = ({ onClose }) => {
   // Calcular el precio total del carrito sumando el precio de cada artículo
   const totalPrice = getTotalPrice();
 
+  // Función para cerrar el modal cuando se hace clic fuera del recuadro
+  const handleModalClose = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Aseguramos que el clic fuera del contenido del modal cierre el modal
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+      onClick={handleModalClose} // Añadimos la función para cerrar al hacer clic fuera del modal
+    >
       <div className="relative bg-white p-6 rounded-lg w-full max-w-md">
         <button
           onClick={onClose}

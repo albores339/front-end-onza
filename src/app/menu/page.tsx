@@ -5,6 +5,7 @@ import { FC, useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import CartModal from "../components/CartModal";
 import Card from "../components/menu/menu-card";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 // Usamos dynamic para importar Swiper en el cliente
 const MenuSection = dynamic(() => import("../components/menu-section"), { ssr: false });
@@ -214,6 +215,12 @@ const MenuPage: FC = () => {
             onAddToCart={handleOpenModal}
           />
         </SwiperSlide>
+        <button
+        onClick={handleOpenModal}
+        className="fixed bottom-20 right-4 bg-pink-500 p-4 rounded-full shadow-lg text-white hover:bg-indigo-600 focus:outline-none animate-bounce z-50"
+      >
+        <ShoppingCartIcon className="h-8 w-8" />
+      </button>
       </MenuSection>
     </div>
   );
